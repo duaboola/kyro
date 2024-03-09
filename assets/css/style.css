@@ -1,0 +1,566 @@
+
+  
+  body {
+    font-family: "Marcellus", serif;
+    background-color: #304747;
+    color: #D3B88C;
+    text-align: justify;
+    overflow-x: hidden !important;
+}
+
+.section-title
+{
+  text-align: center;
+}
+
+.section-title p {
+  font-family: "Marck Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.section-title img {
+  width: 40px;
+  height: 30px;
+}
+
+hr {
+  background-color: #D3B88C;
+}
+
+/* ---------- Navbar ---------*/
+#ftco-navbar {
+    background-color: #304747;
+}
+
+/* Navbar items in gold color */
+.navbar-nav .nav-link {
+    color: #928b7f !important;
+}
+
+/* Order Now link with gold border */
+.navbar-nav .order-now-link p{
+    color: #D3B88C !important; /* Set the text color to gold */
+    border: 2px solid #D3B88C; /* Set a gold border */
+    border-radius: 10px; /* Add some border radius for roundness */
+    padding: 5px 15px; /* Add padding for spacing */
+}
+
+/* Remove background color from Order Now link */
+.navbar-nav .order-now-link:hover {
+    background-color: transparent !important; /* Remove background color on hover */
+}
+
+
+/* ---------- Hero ---------*/
+
+
+.hero .carousel-item {
+  position: relative; /* Ensure the container is positioned relatively */
+}
+
+.hero .carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: 1; /* Ensure the overlay sits above the image */
+}
+
+.hero .carousel-item img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0; /* Ensure the image sits below the overlay */
+}
+
+
+.hero .carousel-indicators {
+  position: absolute;
+  bottom: 10%;
+  left: 0%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.hero .carousel-caption {
+  /* position: absolute;
+  top: 60%;
+  left: 10%; */
+  transform: translate(0%, -50%);
+  text-align: center;
+  color: #D3B88C;
+  align-items: center;
+z-index: 10;
+}
+
+.zoomed-out {
+  transform: scale(1.6); /* Initially zoomed in */
+  transition: transform 1s ease; /* Smooth transition */
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: -100px; /* Initially hidden */
+  transition: bottom 1s ease; /* Smooth transition */
+}
+
+.carousel-inner .active {
+  transition: none; /* Disable transition for initial load */
+}
+
+
+.hero .carousel-caption h1 {
+  font-size: 3rem;
+  font-weight:500;
+  
+  text-align: left;
+  color: #D3B88C;
+}
+
+
+.hero .carousel-caption button {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: transparent;
+  color: #D3B88C;
+  border: 2px solid #D3B88C;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  
+  margin-top: 2%;
+  text-align: left;
+  color: white;
+}
+
+.hero .carousel-caption button:hover {
+  background-color: #D3B88C;
+  color: white;
+  border-color: #D3B88C;
+}
+
+@media (max-width: 1200px) {
+  .hero .carousel-caption {
+    width: 90%; /* Adjust the width for smaller screens */
+  }
+
+  .hero .carousel-caption p {
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero .carousel-caption {
+    width: 100%;
+    left: 5%;
+    text-align: center;
+    align-items: center;
+  }
+  .hero .carousel-caption h1 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+    
+  }
+
+  .hero .carousel-caption p {
+    margin-top: 10%;
+    text-align: left;
+    padding-right: 20px;
+    margin-right: 10px;
+    font-size: 0.8 rem;
+  }
+  
+
+  .hero .carousel-caption button {
+    
+   font-size: medium;
+  }
+}
+
+@media (max-width: 413px)
+{
+  .hero .carousel-caption {
+    width: 80%;
+  }
+  .hero .carousel-caption p {
+    font-size: 1rem;
+    width: 80%;
+    margin-top: 14%;
+  }
+  .hero .carousel-caption button {
+    
+    font-size: small;
+   }
+}
+
+@media(max-width:281px)
+{
+  .hero .carousel-caption p{
+    margin-top: 40%;
+    font-size: 0.5rem;
+  }
+  .hero .carousel-caption button {
+    font-size: 1 rem;
+  }
+}
+
+/* ---------- Chef ---------*/
+.chef {
+  margin-top: 50px;
+}
+.chef .carousel-item img{
+    height: 500px;
+    object-fit: cover;
+}
+
+/* -----------Menu Tabs -------*/
+.tab-pane img {
+    height: 400px;
+}
+
+
+
+.menu-tabs .nav-link {
+  color: #D3B88C;
+}
+
+.menu-tabs .nav-link.active {
+  color: #D3B88C;
+  background-color: transparent;
+}
+
+.menu-tabs a {
+  font-size: larger;
+}
+
+.menu-tabs .nav-pills {
+  justify-content: center;
+  padding-top: 70px;
+  padding-left: 30px;
+}
+
+.tab-pane {
+  display: none; /* Initially hide all tab panes */
+}
+
+.tab-pane.active {
+  display: block; /* Show active tab pane */
+}
+
+@media (max-width : 900px)
+{
+  .tab-pane img {
+    height:auto;
+    width: 60vw;
+  }
+  .menu-tabs .nav-pills {
+    justify-content: center;
+    /* padding-top: 70px;
+    padding-left: 30px; */
+  }
+}
+
+/* --------- About -----------*/
+
+
+
+.about i {
+  font-size: 48px;
+}
+
+.about .spinning {
+  display: none; 
+  position: absolute;
+  left: 70%;
+  padding-bottom: 50px;
+}
+
+.about .spinning p {
+  display: none;
+  height: 300px;
+  width: 300px;
+  position: relative;
+  animation: effect 15s linear infinite;
+}
+
+@keyframes effect {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.about span {
+  position: absolute;
+  left: 50%;
+  transform-origin: 0px 150px;
+  transform-style: flat;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #D3B88C;
+}
+
+@media screen and (min-width: 900px) {
+  .about .spinning {
+    display: block;  }
+  .about .spinning p {
+    display: block;  }
+}
+
+/* .circle-text {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #333;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  line-height: 200px;
+  position: relative;
+  animation: spin 10s linear infinite;
+  
+}
+
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.spinning {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  z-index: 100;
+} */
+
+  
+
+  /*------- Gallery -----*/
+  .gallery img {
+      width: 200px;
+      padding: 10px;
+  }
+
+ 
+
+  /* Styles for modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 40%;
+  top: 0;
+  /* width: 100%; */
+  width: 300px;
+  height: 500px;
+  overflow: auto;
+  background-color: rgba(0,0,0,0);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  /* max-width: 80%; */
+  max-height: 400px;
+  padding: 5%;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+  /*------ Contact -----*/
+  /* .container .map {
+   
+    float: left;
+  }
+  .container .contact-form {
+    width: 100%;
+    margin-left: 2%;
+    float: left;
+    align-items: center;
+  }
+  .container .contact-form .title {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #242424;
+    margin: 5% 8%;
+  }
+  .container .contact-form .subtitle {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 0 4% 5% 8%;
+  }
+  .container .contact-form input,
+  .container .contact-form textarea {
+    width: 500px;
+    padding: 3%;
+    margin: 2% 8%;
+    color: #D3B88C;
+    border: 1px solid #D3B88C;
+    background-color: transparent;
+  }
+  .container .contact-form input::placeholder,
+  .container .contact-form textarea::placeholder {
+    color: #D3B88C;
+  }
+  .container .contact-form .btn-send {
+    background:transparent;
+    width: 180px;
+    height: 60px;
+    color: #D3B88C;
+    font-weight: 700;
+    margin: 2% 8%;
+    border: 1px solid #D3B88C;
+  } */
+
+  .contact{
+    margin-top: 60px;
+  }
+
+  .contact input,
+  .contact textarea
+  {
+    color: #D3B88C;
+    border: 1px solid #D3B88C;
+    background-color: transparent;
+  }
+
+  .contact input ::placeholder,
+  .contact textarea ::placeholder{
+    color: #D3B88C;
+  }
+
+  .contact .btn {
+    background:transparent;
+    width: 180px;
+    height: 60px;
+    color: #D3B88C;
+    font-weight: 700;
+    margin: 2% 0%;
+    border: 1px solid #D3B88C;
+  }
+
+
+  /* ------ Footer ------*/
+  footer img {
+      width: 200px;
+      padding-bottom: 50px;
+  }
+  footer {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  footer a p{
+    color: #D3B88C;
+  }
+
+
+  /* ----- Actual Menu Page -----*/
+  .actual-menu .nav-link{
+    color: #D3B88C !important; /* Set the text color to gold */
+    border: 2px solid #D3B88C; /* Set a gold border */
+    border-radius: 50px; /* Add some border radius for roundness */
+    padding: 30px 50px;
+    background-color: transparent;
+    font-size: larger;
+  }
+
+  .actual-menu .nav-link.active{
+      background-color: #D3B88C !important;
+      color: white !important;
+      
+  }
+
+  .actual-menu .pricediv
+  {
+    position: relative;
+  }
+
+  .actual-menu .price{
+    position: absolute; top: 0; right: 0;
+  }
+
+  .menu-heading {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.circle {
+    position: absolute;
+    background-color: transparent;
+    border: 1px solid #D3B88C;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+
+.circle:nth-child(1),
+.circle:nth-child(7) {
+    left: 10%;
+}
+
+.circle:nth-child(6){
+  right: 10%;
+}
+
+.circle:nth-child(2) {
+    left: 8%;
+    width: 7px;
+    height: 7px;
+}
+
+.circle:nth-child(3),
+.circle:nth-child(5) {
+    right: 8%;
+    width: 7px;
+    height: 7px;
+}
+
+.actual-menu img {
+  /* width: 200px; */
+  width: 100%;
+  padding: 10px;
+}
+
+
+  /*------ Events ------*/
+  .event1 img{
+    width: auto;
+    height: 500px;
+  }
+
+  .event2 .card {
+    background-color: #304747;
+    border: 2px solid transparent; /* Set border to transparent to avoid doubling the border with box-shadow */
+    box-shadow: inset 0 0 0 1px #D3B88C; /* Adjust box-shadow to create a border inside the outline */
+    margin-top: -350px;
+  }
