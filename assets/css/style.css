@@ -369,6 +369,12 @@ z-index: 10;
   background-color: rgba(0,0,0,0);
 }
 
+@media (max-width : 900px)
+{
+  .modal {
+    left: 10%;
+  }
+}
 .modal-content {
   margin: auto;
   display: block;
