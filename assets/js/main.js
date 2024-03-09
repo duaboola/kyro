@@ -54,7 +54,7 @@ function changeImage(tab) {
             imagePath += "P1030839.JPG";
             break;
         case 'hookah':
-            imagePath += "_DSC5288.jpg";
+            imagePath += "hook.jpg";
             break;
         default:
             break;
