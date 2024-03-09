@@ -410,6 +410,21 @@
     window.onload = hideSpinningBasedOnWindowSize;
     window.onresize = hideSpinningBasedOnWindowSize;
         </script>
+
+<script>
+    const str = "KYROLOUNGE KYROLOUNGE KYROLOUNGE";
+    const text = document.getElementById("text");
+    window.onload = function(){
+        for (let i = 0; i < str.length; i++) {
+            let span = document.createElement('span');
+            span.innerHTML = str[i] 
+            text.appendChild(span);
+            console.log(str[i])
+            span.style.transform = `rotate(${11*i}deg)`;
+            
+        }
+    }
+</script> 
         <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
         <script>
             AOS.init();
