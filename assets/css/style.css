@@ -5,7 +5,7 @@
     background-color: #304747;
     color: #D3B88C;
     text-align: justify;
-    overflow-x: hidden !important;
+    overflow-x:auto;
 }
 
 .section-title
@@ -103,11 +103,14 @@ hr {
   transition: transform 1s ease; /* Smooth transition */
 }
 
-.carousel-caption {
+/* .carousel-caption {
   position: absolute;
-  bottom: -100px; /* Initially hidden */
-  transition: bottom 1s ease; /* Smooth transition */
-}
+  bottom: -100px; 
+  transition: bottom 1s ease; 
+} */
+
+
+
 
 .carousel-inner .active {
   transition: none; /* Disable transition for initial load */
@@ -178,15 +181,11 @@ hr {
 
 @media (max-width: 413px)
 {
-  .hero .carousel-caption {
-    width: 80%;
+  .hero .carousel-caption  h1{
+    width: 100%;
     align-items: center;
   }
-  .hero .carousel-caption p {
-    font-size: 1rem;
-    width: 80%;
-    margin-top: 14%;
-  }
+  
   .hero .carousel-caption button {
     
     font-size: small;
@@ -195,16 +194,46 @@ hr {
 
 @media(max-width:281px)
 {
-  .hero .carousel-caption {
-    width: 60%;
+  .hero .carousel-caption h1{
+    width: 100%;
+    font-size: medium;
   } 
 
-  .hero .carousel-caption p{
-    margin-top: 40%;
-    font-size: 0.5rem;
-  }
+  
   .hero .carousel-caption button {
     font-size: 1 rem;
+  }
+}
+
+carousel-caption h1{
+  position: absolute;
+  bottom: 0; /* Initially hidden at the bottom */
+  left: 0;
+  right: 0;
+  color: #fff; /* Adjust text color as needed */
+  padding: 20px; /* Adjust padding as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: bottom 1s ease; /* Smooth transition */
+}
+
+/* Adjust bottom position based on screen size */
+@media (max-width: 767px) {
+  .carousel-caption h1 {
+    bottom: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .carousel-caption h1{
+    bottom: 10%;
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel-caption h1{
+    bottom: 20%;
   }
 }
 
@@ -221,10 +250,22 @@ hr {
   color: white;
 }
 
+@media (max-width :768px){
+  .chef .symbol{
+    display: none;
+  }
+}
 /* -----------Menu Tabs -------*/
+.menu-tabs {
+  width: 100vw !important;
+  overflow-x: hidden;
+}
+
+
 .tab-pane img {
   height:400px;
   width: 250px;
+  margin-bottom: 10px;
 }
 
 
