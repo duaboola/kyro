@@ -45,29 +45,35 @@ document.addEventListener("DOMContentLoaded", function() {
 function changeImage(tab) {
     var imageElement1 = document.getElementById(tab + "-image-1");
     var imageElement2 = document.getElementById(tab + "-image-2");
+    var imageElement3 = document.getElementById(tab + "-image-3");
     var imagePath1 = "./assets/images/hero/menu/";
     var imagePath2 = "./assets/images/hero/menu/";
+    var imagePath3 = "./assets/images/hero/menu/";
 
     switch (tab) {
         case 'food':
-            imagePath1 += "f1.JPG";
-            imagePath2 += "f2.JPG";
+            imagePath1 += "1.png";
+            imagePath2 += "2.png";
+            imagePath3 += "3.png";
             break;
         case 'beverage':
-            imagePath1 += "d1.jpg";
-            imagePath2 += "d2.jpg";
+            imagePath1 += "4.png";
+            imagePath2 += "5.png";
+            imagePath3 += "6.png";
             break;
         case 'hookah':
-            imagePath1 += "h1.JPG";
-            imagePath2 += "h2.jpg";
+            imagePath1 += "7.png";
+            imagePath2 += "8.png";
+            imagePath3 += "9.png";
             break;
         default:
             break;
     }
 
-    if (imageElement1 && imageElement2) {
+    if (imageElement1 && imageElement2 && imageElement3) {
         imageElement1.src = imagePath1;
         imageElement2.src = imagePath2;
+        imageElement3.src = imagePath3;
     }
 }
 
