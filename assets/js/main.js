@@ -52,19 +52,19 @@ function changeImage(tab) {
 
     switch (tab) {
         case 'food':
-            imagePath1 += "1.png";
-            imagePath2 += "2.png";
-            imagePath3 += "3.png";
+            imagePath1 += "1.webp";
+            imagePath2 += "2.webp";
+            imagePath3 += "3.webp";
             break;
         case 'beverage':
-            imagePath1 += "4.png";
-            imagePath2 += "5.png";
-            imagePath3 += "6.png";
+            imagePath1 += "4.webp";
+            imagePath2 += "5.webp";
+            imagePath3 += "6.webp";
             break;
         case 'hookah':
-            imagePath1 += "7.png";
-            imagePath2 += "8.png";
-            imagePath3 += "9.png";
+            imagePath1 += "7.webp";
+            imagePath2 += "8.webp";
+            imagePath3 += "9.webp";
             break;
         default:
             break;
