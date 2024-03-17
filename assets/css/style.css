@@ -317,6 +317,10 @@ carousel-caption h1{
     /* padding-top: 70px;
     padding-left: 30px; */
   }
+
+  .menu-tabs .nav-link {
+   
+  }
 }
 
 /* --------- About -----------*/
@@ -555,6 +559,7 @@ carousel-caption h1{
     font-size: larger;
   }
 
+
   .actual-menu .nav-link.active{
       background-color: #D3B88C !important;
       color: white !important;
@@ -580,6 +585,25 @@ carousel-caption h1{
   .actual-menu .smallname
   {
   display: none;
+  }
+
+  @media only screen and (max-width:1200px){
+    .actual-menu p {
+      word-break: break-word; /* Allow long words to break */
+      font-size: small;
+  }
+  
+  .actual-menu h5 {
+    font-size: medium;
+  }
+  
+  .actual-menu span {
+    font-size: smaller;
+  }
+
+  .actual-menu .price{
+    font-size: x-small;
+  }
   }
 
 /* Media query for mobile devices */
@@ -615,7 +639,19 @@ carousel-caption h1{
 
   .actual-menu p {
     word-break: break-word; /* Allow long words to break */
-    font-size: small;
+    font-size: xx-small;
+}
+
+.actual-menu h5 {
+  font-size: smaller;
+}
+
+.actual-menu span {
+  font-size: xx-small;
+}
+
+.actual-menu .price {
+  font-size: xx-small;
 }
 
 .actual-menu .row > [class*="col-"] {
@@ -635,6 +671,9 @@ display: block;
       display: none;
     }
   
+    .actual-menu .mobile-first {
+      order: 1;
+    }
 }
 
   .menu-heading {
