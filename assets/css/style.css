@@ -780,6 +780,8 @@ carousel-caption h1{
   .actual-menu .col-6 {
       flex-basis: 100%!important;
       width: 100vw !important;
+      flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 
