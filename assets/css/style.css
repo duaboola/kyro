@@ -635,7 +635,7 @@ carousel-caption h1{
 @media only screen and (max-width: 767px) {
   .actual-menu .nav-link{
     font-size: small;
-    padding: 12px 20px;
+    padding: 7px 12px;
     
     width: 100%;
   }
