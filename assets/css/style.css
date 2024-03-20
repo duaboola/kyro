@@ -263,8 +263,8 @@ carousel-caption h1{
 
 
 .tab-pane img {
-  height:400px;
-  width: 250px;
+  /* height:400px;*/
+  width: 250px; 
   margin-bottom: 10px;
 }
 
@@ -408,8 +408,10 @@ carousel-caption h1{
 
   /*------- Gallery -----*/
   .gallery img {
-      width: 200px;
-      padding: 10px;
+      width: 250px;
+      height: 300px;
+      /* padding: 10px; */
+      padding-bottom: 10px;
   }
 
  
@@ -804,7 +806,8 @@ carousel-caption h1{
   /*------ Events ------*/
   .event1 img{
     width: auto;
-    height: 500px;
+    height: 300px;
+    margin-bottom: 10px;
   }
 
   .event2 .card {
