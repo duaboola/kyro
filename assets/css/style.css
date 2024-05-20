@@ -2,10 +2,11 @@
   
   body {
     font-family: "Marcellus", serif;
-    background-color: #304747;
+    /* background-color: #304747; */
+    background-color: black;
     color: #D3B88C;
     text-align: justify;
-    overflow-x:auto;
+    overflow-x:hidden !important;
 }
 
 .section-title
@@ -30,7 +31,7 @@ hr {
 
 /* ---------- Navbar ---------*/
 #ftco-navbar {
-    background-color: #304747;
+    background-color: black;
 }
 
 /* Navbar items in gold color */
@@ -69,6 +70,33 @@ hr {
   background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
   z-index: 1; /* Ensure the overlay sits above the image */
 }
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust overlay color and opacity as needed */
+}
+
 
 .hero .carousel-item img {
   width: 100vw;
@@ -537,10 +565,14 @@ carousel-caption h1{
 
 
   /* ------ Footer ------*/
-  footer img {
+  footer .logo-name {
       width: 200px;
-      padding-bottom: 50px;
+      padding-bottom: 10px;
   }
+  footer .logo-name2 {
+    width: 200px;
+    padding-bottom: 50px;
+}
   footer {
     padding-top: 200px;
     padding-bottom: 200px;
@@ -549,6 +581,363 @@ carousel-caption h1{
   footer a p{
     color: #D3B88C;
   }
+
+  .footer {
+    background-color: #000;
+    color: #aa8e62;
+    padding: 20px 0;
+  }
+  .footer .bg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 400px; /* Ensure it covers the entire container */
+      /* object-fit: cover; */
+      overflow-x: hidden;
+    
+  }
+
+  .footer .divider1 {
+    border-top: 1px solid #aa8e62;
+    width: 60%; 
+  }
+
+  .footer .vertical-divider {
+    border-left: 1px solid #aa8e62;
+    height: 50%;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 100;
+  }
+  .footer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  }
+
+  
+
+  .footer .bg-content{
+    height: 300px;
+  }
+  
+  .footer a {
+    color: #aa8e62;
+    text-decoration: none;
+  }
+  .footer .social-icons img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+  }
+  .footer .contact-info {
+    line-height: 1.6;
+  }
+  .footer .border-line {
+    border-right: 1px solid #d5b77a;
+    height: 100px;
+    margin: 0 20px;
+  }
+
+  .semicircle-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 10;
+    top:0%;
+    width: 200px; /* Half of the circle's width */
+    height: 200px; /* Half of the circle's height */
+    overflow: hidden !important; /* Hide the other half of the circle */
+    transform: translate(50%, 50%); /* Adjust as needed for positioning */
+    transform-origin: bottom right;
+    
+  }
+  
+  .semicircle {
+    width: 200px; /* Full width of the circle */
+    height: 200px; /* Full height of the circle */
+    background-color: transparent;
+    border: 2px solid white; /* White border */
+    border-radius: 50%; /* Full circle */
+    margin: 0;
+    padding: 0;
+    overflow: hidden !important;
+  }
+
+  @media (min-width: 991.98px) 
+  {
+    /* .footer .contact-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+      height: 100%;
+    } */
+  }
+
+  @media (max-width: 991.98px) {
+    footer .divider1{
+      display: none;
+    }
+
+    footer .vertical-divider{
+      display: none;
+    }
+
+    footer .bg{
+      display: none;
+    }
+}
+
+  /*---- New Menu Page ------*/
+  .flavors-section {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/kyro.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fl-text-container {
+    z-index: 1;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.5); /* Optional for better text visibility */
+    padding: 20px;
+}
+
+.fl-text-container h1 {
+  color: #aa8e62;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.fl-text-container h1::after {
+  content: '';
+  display: block;
+  width: 50px; /* Adjust the width as needed */
+  height: 3px; /* Adjust the height as needed */
+  background-color: #aa8e62;
+  margin-top: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.fl-text-container h6 {
+  margin-top: 1rem;
+  font-size: 1.2rem; /* Increase the size of paragraph text */
+  letter-spacing: 1px; /* Increase spacing between letters */
+  margin-bottom: 1rem;
+}
+
+.fl-image-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/kyro.jpg') no-repeat center center;
+    background-size: cover;
+    width: 100vw;
+    height: 80vh;
+    overflow-x:hidden !important;
+}
+
+/* .semicircle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px; 
+  height: 100px; 
+  background-color: transparent;
+  border: 2px solid white; 
+  border-radius: 100px 100px 0 0; 
+  transform: translateY(50%) translateX(50%) rotate(180deg);
+  transform-origin: bottom right;
+  overflow: hidden;
+} */
+
+.semicircle-wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top:90%;
+  width: 100px; /* Half of the circle's width */
+  height: 200px; /* Half of the circle's height */
+  overflow: hidden !important; /* Hide the other half of the circle */
+  transform: translate(50%, 90%); /* Adjust as needed for positioning */
+  transform-origin: bottom right;
+  
+}
+
+.semicircle {
+  width: 200px; /* Full width of the circle */
+  height: 200px; /* Full height of the circle */
+  background-color: transparent;
+  border: 2px solid white; /* White border */
+  border-radius: 50%; /* Full circle */
+  margin: 0;
+  padding: 0;
+  overflow: hidden !important;
+}
+
+
+
+
+/* Remove background image for large screens */
+@media (min-width: 992px) {
+    .flavors-section {
+        background: none;
+    }
+
+    .fl-image-container {
+        display: block;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .fl-image-container {
+        display: none;
+    }
+
+    /* .semicircle {
+      display: none; 
+  } */
+}
+
+.menu-section h2 {
+  color: #aa8e62;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.menu-section h2::after {
+  content: '';
+  display: block;
+  width: 50px; /* Adjust the width as needed */
+  height: 3px; /* Adjust the height as needed */
+  background-color: #aa8e62;
+  margin-top: 0.5rem; /* Center the line vertically */
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Center the line horizontally */
+  transform: translateX(-50%); /* Center the line horizontally */
+}
+
+.menu-section .highpoints p{
+  font-size: larger;
+}
+
+.menu-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-button-container .menu-button {
+  background-color: white;
+  color: #aa8e62;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 50%;
+  /* height: 60px; */
+  text-align: center;
+  line-height: 1.2;
+}
+
+.menu-button-container .menu-button:hover {
+  background-color: #aa8e62; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+}
+
+
+
+/* .semicircle1 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 400px; 
+  height: 400px; 
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50%; 
+  transform: translateY(50%) translateX(-50%);
+  transform-origin: bottom center;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+
+/* .semicircle1-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top:200%;
+  width: 200px; 
+  height: 200px; 
+  overflow: hidden; 
+  transform: translateY(50%) translateX(-30%);
+  transform-origin: bottom left;
+} */
+
+.semicircle1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top:-70vh;
+  width: 400px; /* Full circle diameter */
+  height: 400px; /* Full circle diameter */
+  background-color: transparent;
+  border: 2px solid white; /* White border */
+  border-radius: 50%; /* Full circle */
+  transform: translateY(100%) translateX(-30%);
+  transform-origin: bottom left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%; /* Ensure container takes full height */
+  padding: 20px; /* Adjust as needed */
+}
+
+.social-logo {
+  max-width: 80px; /* Adjust as needed */
+  max-height: 80px; /* Adjust as needed */
+  margin: 10px 0; /* Adjust as needed */
+}
+
+.rounded-square {
+  border-radius: 15px; /* Adjust this value for more or less rounding */
+}
+
+ /* Media Queries */
+ @media (max-width: 767px) {
+  .semicircle1-wrapper {
+    display: none;
+  }
+
+  .menu-button-container .btn {
+    width: 70%;
+  }
+}
+
+@media (min-width: 768px) {
+  .semicircle2-wrapper {
+    display: none;
+  }
+}
 
 
   /* ----- Actual Menu Page -----*/
@@ -811,7 +1200,7 @@ carousel-caption h1{
   }
 
   .event2 .card {
-    background-color: #304747;
+    background-color: black;
     border: 2px solid transparent; /* Set border to transparent to avoid doubling the border with box-shadow */
     box-shadow: inset 0 0 0 1px #D3B88C; /* Adjust box-shadow to create a border inside the outline */
     margin-top: -350px;
