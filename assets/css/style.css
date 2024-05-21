@@ -655,7 +655,7 @@ carousel-caption h1{
     overflow: hidden !important; /* Hide the other half of the circle */
     transform: translate(50%, 50%); /* Adjust as needed for positioning */
     transform-origin: bottom right;
-    
+    overflow: hidden !important;
   }
   
   .semicircle {
@@ -684,13 +684,33 @@ carousel-caption h1{
       display: none;
     }
 
+    footer .logo-name {
+      width: 100px;
+  }
+
     footer .vertical-divider{
       display: none;
     }
 
-    footer .bg{
-      display: none;
-    }
+    
+}
+
+@media (max-width: 767px){
+  footer .divider1{
+    display: none;
+  }
+
+  footer .logo-name {
+    width: 200px;
+}
+
+  footer .vertical-divider{
+    display: none;
+  }
+
+  footer .bg{
+    display: none;
+  }
 }
 
   /*---- New Menu Page ------*/
@@ -746,19 +766,6 @@ carousel-caption h1{
     overflow-x:hidden !important;
 }
 
-/* .semicircle {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 200px; 
-  height: 100px; 
-  background-color: transparent;
-  border: 2px solid white; 
-  border-radius: 100px 100px 0 0; 
-  transform: translateY(50%) translateX(50%) rotate(180deg);
-  transform-origin: bottom right;
-  overflow: hidden;
-} */
 
 .semicircle-wrapper {
   position: absolute;
@@ -939,6 +946,14 @@ carousel-caption h1{
   }
 }
 
+@media (max-width: 376px){
+
+  .menu-section{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+}
 
   /* ----- Actual Menu Page -----*/
   .actual-menu .nav-link{
