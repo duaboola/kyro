@@ -73,8 +73,8 @@ hr {
 
 .video-container {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -838,7 +838,6 @@ carousel-caption h1{
 .menu-section .highpoints p{
   font-size: larger;
 }
-
 .menu-button-container {
   display: flex;
   flex-direction: column;
@@ -851,17 +850,22 @@ carousel-caption h1{
   border-radius: 10px;
   margin-bottom: 10px;
   width: 50%;
-  /* height: 60px; */
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   line-height: 1.2;
 }
 
 .menu-button-container .menu-button:hover {
-  background-color: #aa8e62; /* Change background color on hover */
-  color: white; /* Change text color on hover */
+  background-color: #aa8e62;
+  color: white;
+  text-decoration: none;
 }
 
-
+.btn {
+  width: 100%;
+}
 
 /* .semicircle1 {
   position: absolute;
@@ -936,7 +940,7 @@ carousel-caption h1{
   }
 
   .menu-button-container .btn {
-    width: 70%;
+    width: 100%;
   }
 }
 
