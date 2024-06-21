@@ -867,27 +867,35 @@ margin-left: 20px;
   content: "";
 }
 
+.food-menu-small{
+  display: none;
+}
 /* Media query for smaller screens */
 @media (max-width: 480px) {
-  .food-menu-items {
+
+  .food-menu-items{
+    display: none;
+  }
+
+  .food-menu-small{
+    display: block;
+  }
+  /* .food-menu-items {
     flex-direction:row;
     align-items:center;
   }
 
   .food-menu-items span {
-    padding: 5px 0; /* Adjust padding for smaller screens */
-  }
+    padding: 5px 0; }
 
   .food-menu-items span::after {
-    display: none; /* Remove separator for vertical layout */
-  }
+    display: none; }
 
   .food-menu-items span::after {
     content: "";
     display: block;
     position: static;
-    margin: 5px 0; /* Adjust margin for vertical spacing */
-  }
+    margin: 5px 0;  } */
 }
 
 
