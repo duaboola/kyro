@@ -717,7 +717,7 @@ carousel-caption h1{
   .flavors-section {
     height: 100vh;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/kyro.jpg') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../shared_images/P2030100.JPG') no-repeat center center;
     background-size: cover;
     color: white;
     display: flex;
@@ -759,10 +759,10 @@ carousel-caption h1{
 }
 
 .fl-image-container {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/kyro.jpg') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../shared_images/P2030100.JPG') no-repeat center center;
     background-size: cover;
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     overflow-x:hidden !important;
 }
 
@@ -838,35 +838,108 @@ carousel-caption h1{
 .menu-section .highpoints p{
   font-size: larger;
 }
+
+.food-menu-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.2em; /* Adjust as needed */
+}
+
+.food-menu-items span {
+  position: relative;
+  padding: 0 20px; /* Adjust padding for spacing around the separator */
+margin-left: 20px;
+}
+
+.food-menu-items span::after {
+  content: "|";
+  position: absolute;
+  right: -15px;
+  padding-left: 10px;
+}
+
+.food-menu-items span:last-child::after {
+  content: "";
+}
+
+/* Media query for smaller screens */
+@media (max-width: 480px) {
+  .food-menu-items {
+    flex-direction:row;
+    align-items:center;
+  }
+
+  .food-menu-items span {
+    padding: 5px 0; /* Adjust padding for smaller screens */
+  }
+
+  .food-menu-items span::after {
+    display: none; /* Remove separator for vertical layout */
+  }
+
+  .food-menu-items span::after {
+    content: "";
+    display: block;
+    position: static;
+    margin: 5px 0; /* Adjust margin for vertical spacing */
+  }
+}
+
+
 .menu-button-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.menu-button-container .menu-button {
-  background-color: white;
+
+.menu-button-container .menu-button button{
+  background-color: rgb(248, 231, 195);
   color: #aa8e62;
-  border-radius: 10px;
+  border-radius: 50px;
   margin-bottom: 10px;
-  width: 50%;
+  width: 20vw;
+  height: 60px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
-.menu-button-container .menu-button:hover {
+.menu-button-container .menu-button button:hover {
   background-color: #aa8e62;
   color: white;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
+.menu-button-container .menu-button:hover{
+  text-decoration: none !important;
+}
 .btn {
   width: 100%;
 }
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .menu-button-container .menu-button button {
+    width: 30vw;  
+  }
+}
 
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .menu-button-container .menu-button button {
+    width: 40vw; 
+    font-size: smaller;
+  }
+}
 /* .semicircle1 {
   position: absolute;
   bottom: 0;
@@ -920,13 +993,13 @@ carousel-caption h1{
   justify-content: space-around;
   align-items: center;
   height: 100%; /* Ensure container takes full height */
-  padding: 20px; /* Adjust as needed */
+  padding: 20px;  
 }
 
 .social-logo {
-  max-width: 80px; /* Adjust as needed */
-  max-height: 80px; /* Adjust as needed */
-  margin: 10px 0; /* Adjust as needed */
+  max-width: 80px;   
+  max-height: 80px;   
+  margin: 10px 0;   
 }
 
 .rounded-square {
