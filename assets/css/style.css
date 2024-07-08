@@ -1,7 +1,22 @@
+@font-face {
+  font-family: 'Alfa';
+  src: url('../assets/fonts/alfa.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
-  
-  body {
-    font-family: "Marcellus", serif;
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('../assets/fonts/glacial-indifference.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+body {
+    /* font-family: "Marcellus", serif; */
+    font-family: 'Glacial Indifference', sans-serif;
     /* background-color: #304747; */
     background-color: black;
     color: #D3B88C;
@@ -12,6 +27,7 @@
 .section-title
 {
   text-align: center;
+  font-family: 'Alfa', serif;
 }
 
 .section-title p {
@@ -124,6 +140,7 @@ hr {
   align-items: center !important;
   justify-content: center !important;
   z-index: 10;
+  font-family: 'Alfa', serif;
 }
 
 .zoomed-out {
