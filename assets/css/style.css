@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'Alfa';
-  src: url('../assets/fonts/alfa.otf') format('opentype');
+  src: url('../fonts/Alta_caption.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Glacial Indifference';
-  src: url('../assets/fonts/glacial-indifference.otf') format('opentype');
+  src: url('../fonts/GlacialIndifference-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
