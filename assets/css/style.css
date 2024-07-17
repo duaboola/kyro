@@ -1322,3 +1322,25 @@ margin-left: 20px;
     box-shadow: inset 0 0 0 1px #D3B88C; /* Adjust box-shadow to create a border inside the outline */
     margin-top: -350px;
   }
+
+  
+
+  .whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .whatsapp-icon img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .whatsapp-icon img:hover {
+    transform: scale(1.1);
+  }
+  
