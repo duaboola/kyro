@@ -136,8 +136,8 @@
         </div>
        </section>
 
-        <!-- WhatsApp Chat Icon -->
-        <div class="whatsapp-icon">
+         <!-- WhatsApp Chat Icon -->
+         <div class="whatsapp-icon" data-toggle="tooltip" data-placement="left" title="Give your valuable feedback here!">
             <a href="https://wa.me/97366753220" target="_blank">
             <img src="./assets/images/instagram.png" alt="WhatsApp Chat">
             </a>
@@ -174,6 +174,9 @@
         <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
         <script>
             AOS.init();
+            $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
         </script>
     </body>
 </html>
