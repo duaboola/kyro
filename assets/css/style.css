@@ -731,10 +731,8 @@ carousel-caption h1{
 }
 
   /*---- New Menu Page ------*/
-  .flavors-section {
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../shared_images/P2030100.jpg') no-repeat center center;
+  .fl-image-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../shared_images/P2030100.JPG') no-repeat center center;
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -768,6 +766,7 @@ carousel-caption h1{
 }
 
 .fl-text-container h6 {
+  color: #ffffff;
   margin-top: 1rem;
   font-size: 1.2rem; /* Increase the size of paragraph text */
   letter-spacing: 1px; /* Increase spacing between letters */
